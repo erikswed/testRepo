@@ -3,21 +3,17 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  let photo = "/coverImage.jpg";
+  let someJson = process.env.PUBLIC_URL + 'resume.json';
+
+    
   return (
-    <div className="App">
+      <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={photo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+         {someJson.basics.name}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
